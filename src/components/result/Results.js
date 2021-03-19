@@ -12,7 +12,7 @@ const Results = ({ values, functionSelect }) => {
   return (
 
     <div className="container">
-      <div className="row" style={{marginTop:100}}>
+      <div className="row" style={{marginTop:80}}>
 
         <div className="col-md-6 d-flex flex-wrap mb-3">
           {renderCards}

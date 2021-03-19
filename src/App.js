@@ -45,7 +45,7 @@ const App = () => {
         <Nav />
         <Route exact path={`/details/${id}`}> {select ? <Details select={select} /> : 'Loading...'} </Route>
         <Route exact path="/results"> {values ? <Result values={values} functionSelect={functionSelect} /> : 'Loading...'} </Route>
-        <Route exact path="/"><Home functionCity={functionCity} /></Route>
+        <Route exact path="/"><Home functionSelect={functionSelect} /></Route>
         {/* <Route path="*" component={NotFound}></Route> */}
         <Footer />
 
