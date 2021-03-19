@@ -1,13 +1,17 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
-const Card = () => {
+const Card = ({value, functionSelect}) => {
+  // console.log(value);
   return(
-    <div className="card" style="width: 18rem;">
-      <img src="..." className="card-img-top" alt="..." />
-      <div className="card-body">
-        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <Link to={`/details/${value._id}`}>
+      <div class="card p-2 m-2" style={{width: "300px"}} onClick={() => functionSelect(value._id)}>
+        <img src={value.image} class="card-img-top" alt="..." />
+        <div class="card-body">
+          <p class="card-text">{value.name}</p>
+        </div>
       </div>
-    </div>
+    </Link>
   )
 }
 
