@@ -6,8 +6,8 @@ const Details = ({select}) => {
   return (
 
     <div className="container">
-      <div className="row" style={{marginTop:100}}>
-        <div className="col-sm">
+      <div className="row" style={{marginTop:80}}>
+        <div className="col-sm m-2">
 
           <div className="card p-2" style={{width: 600}}>
           <img src={select.image} className="card-img-top" alt="..." />

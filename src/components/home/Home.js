@@ -56,7 +56,7 @@ const Home = ({ functionSelect }) => {
             {restaurants ? (
                 <Result values={restaurants} functionSelect={functionSelect} />
             ) : (
-                "Loading..."
+                ""
             )}
         </div>
     </>);
