@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../card/Card';
 import Map from '../map/Map';
+import "./result.css";
 
 const Results = ({ values, functionSelect }) => {
 
@@ -9,6 +10,7 @@ const Results = ({ values, functionSelect }) => {
   })
 
   return (
+
     <div className="container">
       <div className="row" style={{marginTop:100}}>
 

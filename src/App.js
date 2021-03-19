@@ -13,6 +13,7 @@ const App = () => {
 
   const [values, setValues] = useState();
   const [select, setSelect] = useState();
+  const [city, setCity] = useState();
   const [id, setId] = useState();
 
   useEffect(() => {
@@ -32,6 +33,11 @@ const App = () => {
     console.log(id);
   }
 
+  const functionCity = (city) => {
+    // setValues(city);
+    console.log('hi');
+  }
+
   console.log(select);
   return (
     <Router>
@@ -39,7 +45,7 @@ const App = () => {
         <Nav />
         <Route exact path={`/details/${id}`}> {select ? <Details select={select} /> : 'Loading...'} </Route>
         <Route exact path="/results"> {values ? <Result values={values} functionSelect={functionSelect} /> : 'Loading...'} </Route>
-        <Route exact path="/" component={Home}></Route>
+        <Route exact path="/"><Home functionCity={functionCity} /></Route>
         {/* <Route path="*" component={NotFound}></Route> */}
         <Footer />
 
