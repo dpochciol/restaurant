@@ -1,4 +1,3 @@
-
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./components/home/Home";
@@ -25,11 +24,12 @@ const App = () => {
   useEffect(() => {
     fetch(`https://yelp-restaurant-api.herokuapp.com/restaurant/${id}`)
       .then(res => res.json())
-      .then(json => setSelect(json));
+      .then(json => setSelect(json), console.log('hi2'));
   }, [id]);
 
   const functionSelect = (id) => {
     setId(id);
+    console.log(id);
   }
 
   console.log(select);
@@ -37,7 +37,7 @@ const App = () => {
     <Router>
       <div className="App">
         <Nav />
-        <Route exact path={`/details/${id}`}> {values ? <Details select={select} /> : 'Loading...'} </Route>
+        <Route exact path={`/details/${id}`}> {select ? <Details select={select} /> : 'Loading...'} </Route>
         <Route exact path="/results"> {values ? <Result values={values} functionSelect={functionSelect} /> : 'Loading...'} </Route>
         <Route exact path="/" component={Home}></Route>
         {/* <Route path="*" component={NotFound}></Route> */}
