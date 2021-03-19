@@ -2,54 +2,22 @@ import React from 'react';
 import Card from '../card/Card';
 import Map from '../map/Map';
 
-const Results = () => {
-  return(
-    <div className="container">
-      <div className="row">
-        <div className="col-md-8 d-flex flex-row bd-highlight mb-3">
+const Results = ({ values, functionSelect }) => {
 
-          <div className="card p-2 bd-highlight">
-            <img src="..." className="card-img-top" alt="..." />
-            <div className="card-body">
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-          <div className="card p-2 bd-highlight">
-            <img src="..." className="card-img-top" alt="..." />
-            <div className="card-body">
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-          <div className="card p-2 bd-highlight">
-            <img src="..." className="card-img-top" alt="..." />
-            <div className="card-body">
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-          <div className="card p-2 bd-highlight">
-            <img src="..." className="card-img-top" alt="..." />
-            <div className="card-body">
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-          <div className="card p-2 bd-highlight">
-            <img src="..." className="card-img-top" alt="..." />
-            <div className="card-body">
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-          <div className="card p-2 bd-highlight">
-            <img src="..." className="card-img-top" alt="..." />
-            <div className="card-body">
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
+  const renderCards = values.map(value => {
+    return <Card value={value} functionSelect={functionSelect} />
+  })
 
-        </div>
-        <div className="col-6 col-md-4">
-          <Map />
-        </div>
+  return (
+    <div className="">
+
+      <div className="col-md-8 d-flex flex-wrap mb-3">
+        {renderCards}
       </div>
+      <div className="col-6 col-md-4">
+        <Map />
+      </div>
+
     </div>
   )
 }
