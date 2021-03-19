@@ -3,11 +3,11 @@ import Card from '../card/Card';
 import Map from '../map/Map';
 
 const Results = () => {
-  return(
+
+  return (
     <div className="container">
       <div className="row">
         <div className="col-md-8 d-flex flex-row bd-highlight mb-3">
-
           <div className="card p-2 bd-highlight">
             <img src="..." className="card-img-top" alt="..." />
             <div className="card-body">
