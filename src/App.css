@@ -3,3 +3,7 @@
   margin: 0;
   padding: 0;
 }
+.App {
+  background: rgb(155, 122, 81);
+  min-height: 100vh;
+}

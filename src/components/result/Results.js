@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../card/Card';
 import Map from '../map/Map';
+import "./result.css";
 
 const Results = ({ values, functionSelect }) => {
 
@@ -9,7 +10,7 @@ const Results = ({ values, functionSelect }) => {
   })
 
   return (
-    <div className="">
+    <div className="result">
 
       <div className="col-md-8 d-flex flex-wrap mb-3">
         {renderCards}
